@@ -1,6 +1,9 @@
 /**
  * Created by j on 2016/3/31.
  */
+/**
+ * Created by j on 2016/3/31.
+ */
 var str1='123';
 var array1;
 var res1=parseInt(str1,10);
@@ -34,7 +37,7 @@ function q4(str){
     string = str.split("");
     var num = string.length;
     for(var i=0;i<num;i++)
-    str5.push(string.pop());
+        str5.push(string.pop());
     return str5.join('');
 }
 var str5='abc';
