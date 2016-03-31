@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    var childCollection = document.querySelectorAll('div');
+    var childs = Array.prototype.slice.call(childCollection);
+    childs.push('abd');
+    console.log(childs);
+
+
+    var c=0
+    var t;
+    var a =["a","b","c","d"];
+    function timeCount()
+    {
+        console.log(a[c]);
+        if(c< a.length-1)
+        { c=c+1;
+        }else{
+            c=0;
+        }
+        t=setTimeout("timeCount()",1000);
+    }
+    timeCount();
+</script>
+</body>
+</html>
