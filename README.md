@@ -1,6 +1,17 @@
 # web-front-end-thinking-tutorial
 
-## 教学提纲
+## 前言
+### 教学课程
+教学课程全部写到我博客上面了 http://simplyy.space/tag/56fa2d3a6ae6a1031eaa4e3b
+
+### 教学模式
+课程采取线下教课模式；github 上看到的人，线上自学模式
+
+### 教学作业和答案
+将在 github 上 提交，标准答案在 ./practice/yuwei/ 路径下
+
+
+## 总教学提纲
 ### 基础
 - 编程基础
     - 你有多喜欢编程
