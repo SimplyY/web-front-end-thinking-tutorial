@@ -82,11 +82,16 @@
     - react-redux
 
 ## 推荐书籍
+- 《css 设计指南》
 - dom 入门书： 《js dom 编程艺术》
-- js 进阶书：[JavaScript语言精粹](https://book.douban.com/subject/3590768/)、effective js、 you dont know js
+- js 进阶小书：[《JavaScript语言精粹》](https://book.douban.com/subject/3590768/)、effective js、 you dont know js
+- js 系统厚书：《js 高级程序设计》、《js 权威指南》即犀牛书
 - 其他：[《高性能网站建设指南》](http://book.douban.com/subject/3132277/)
 
 ## 推荐在线学习资料
 - git 小白入门：http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000
 - github 博客： https://github.com/CoderUnion/coderunion-github-talk/issues/87
 - weibo：https://github.com/CoderUnion/coderunion-github-talk/issues/86
+
+## 线上自学模式和捐赠
+线上自学模式，我没有义务改你的作业(code review)，不过你可以捐赠我（支付宝>10元），邮件联系我，并告诉我你 github id 即可，我就会 code review 你的每一行代码。
