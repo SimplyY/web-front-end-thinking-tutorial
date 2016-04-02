@@ -7,4 +7,4 @@
 -call()和apply()都是为了改变函数体内部this的指向
 -func.call(this, arg1, arg2);
 -func.apply(this, [arg1, arg2]);
--当参数是明确知道数量时，用 call，而不确定的时候，用 apply，然后把参数 push 进数组传递进去。
+-当参数是数组时用 apply.
