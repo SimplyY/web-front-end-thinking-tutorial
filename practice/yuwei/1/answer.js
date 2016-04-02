@@ -9,8 +9,8 @@ var numberArr = ary.map(Number);
 console.log(numberArr);
 
 //3.将集合转化为真正的数组
-// var childCollection = document.querySelectorAll('div');
-// var childs = Array.prototype.slice.call(childCollection);
+var childCollection = document.querySelectorAll('div');
+var childs = Array.prototype.slice.call(childCollection);
 
 //4.写一个spacify函数，使得spacify('hello world')，返回'h e l l o w o r l d'
 function spacify(str){
@@ -29,7 +29,7 @@ function sortStr(str){
 sortStr('cbdae'); //abcde
 
 //6.var a = ['a', 'b', 'c', 'd']，每过1秒log一下数组中的值（闭包）
-function logAfterOneSecond(){
+function logEverSecond(){
     var a = ['a', 'b', 'c', 'd'];
     for (var i = 0; i < a.length; i++) {
         (function(j){
@@ -39,7 +39,7 @@ function logAfterOneSecond(){
         })(i);
     }
 }
-logAfterOneSecond();
+logEverSecond();
 
 //7.定义log，然后它可以代理console.log的方法（使用apply）
 function log(){
