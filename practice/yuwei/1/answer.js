@@ -45,6 +45,7 @@ logAfterOneSecond();
 function log(){
     console.log.apply(console, arguments);
 }
+log('sss');
 
 //8.写出打印的输出（this指向）
 var User = {
@@ -57,5 +58,5 @@ var User = {
 
 console.log(User.getCount()); //1，this指向User，打印User.count
 
-var func = User.getCount();
-console.log(func()); //报错，this指向全局对象，但是全局对象中count未声明
+var func = User.getCount;
+console.log(func()); //undefined
