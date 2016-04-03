@@ -143,12 +143,12 @@
 
         console.log(User.getCount()); //1
 
-        var func = User.getCount();
+        var func = User.getCount;
 
-        var func2 = User.getCount;
+
         console.log(func());//undefined
-        console.log(func); //1
-        console.log(func2);//输出函数整体
+        console.log(func); //整体函数
+
     }
 
 </script>
