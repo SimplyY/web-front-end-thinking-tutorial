@@ -51,6 +51,7 @@ var res5= sortStr('cbdae'); //abcde
 console.log('the result of q5:'+res5);
 //http://www.cnblogs.com/TomXu/archive/2012/01/05/2305453.html
 //原型看不大明白…
+
 //6.var a = ['a', 'b', 'c', 'd']，每过1秒log一下数组中的值（闭包）
 console.log('the result of q6:please move to index.html');
 
