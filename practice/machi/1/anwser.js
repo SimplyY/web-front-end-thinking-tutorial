@@ -41,6 +41,7 @@ console.log('the result of q4:'+res4);
 var str5 = 'abc';
 var res5 = q5(str5);
 console.log('the result of q5:'+res5);*/
+
 function sortStr(str){
     var sortedStr = Array.prototype.slice.call(str).sort().join('');
     //Array.prototype.slice把类数组转化为数组
