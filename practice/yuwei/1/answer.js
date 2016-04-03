@@ -29,7 +29,7 @@ function sortStr(str){
 sortStr('cbdae'); //abcde
 
 //6.var a = ['a', 'b', 'c', 'd']，每过1秒log一下数组中的值（闭包）
-function logEverSecond(){
+function logEverySecond(){
     var a = ['a', 'b', 'c', 'd'];
     for (var i = 0; i < a.length; i++) {
         (function(j){
@@ -39,7 +39,7 @@ function logEverSecond(){
         })(i);
     }
 }
-logEverSecond();
+logEverySecond();
 
 //7.定义log，然后它可以代理console.log的方法（使用apply）
 function log(){
