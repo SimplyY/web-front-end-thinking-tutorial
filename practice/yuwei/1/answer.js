@@ -4,9 +4,9 @@ var number = parseInt(str, 10);
 console.log(number);
 
 // 2.使用Number函数将数字字符串数组：['1','2']转化为数字数组：[1,2]:
-var ary = ['1','2'];
-var numberArr = ary.map(Number);
-console.log(numberArr);
+var array = ['1','2'];
+var numberArray = array.map(Number);
+console.log(numberArray);
 
 //3.将集合转化为真正的数组
 var childCollection = document.querySelectorAll('div');
