@@ -1,7 +1,6 @@
 /**
  * Created by j on 2016/4/6.
  */
-
 var array = ["a","add","fft","ssd","dct","ddt","asdfgs","abd","asdrrr"];
 function autoComplete(document,data) {
     var  element = document.getElementById("demo");
