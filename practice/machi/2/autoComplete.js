@@ -12,7 +12,7 @@ function autoComplete(document,data) {
         CleanLastComplete();
         FindThisResult(array);
         ShowComplete(array);
-        // document.write(input.value);
+         // document.write(input.value);
     }
 
     function CleanLastComplete(data) {
