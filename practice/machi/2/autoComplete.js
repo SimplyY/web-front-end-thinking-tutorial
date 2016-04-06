@@ -16,7 +16,7 @@ function autoComplete(document,data) {
     }
 
     function CleanLastComplete(data) {
-        while(board.hasChildNodes()) //删除所有子节 点
+        while(board.hasChildNodes()) //删除所有子节点
         {
             board.removeChild(board.firstChild);
         }
