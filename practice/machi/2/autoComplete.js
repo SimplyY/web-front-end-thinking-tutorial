@@ -25,7 +25,7 @@ function autoComplete(document,data) {
     function FindThisResult(data){
 
         function ismatch(str){
-            if(str.indexOf(element.value)==0){//实在不知道这里字符串匹配要用什么鬼……作用上感觉这样用差不多于是…
+            if(str.indexOf(element.value)==0){ //实在不知道这里字符串匹配要用什么鬼……作用上感觉这样用差不多于是…
                 return str;
             }
         }
