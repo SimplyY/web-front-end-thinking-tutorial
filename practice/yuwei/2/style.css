@@ -1,0 +1,36 @@
+body{
+    margin-top: 3rem;
+    margin-left: 3rem;
+    background-color: #eaeaea;
+}
+
+li{
+    margin-bottom: 1rem;
+}
+
+#search ul{
+    list-style: none;
+    width: 10.16rem;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    opacity: .8;
+}
+
+#search li{
+    margin-bottom: 0;
+    border-bottom: 1px solid #eee;
+}
+
+#search li:hover{
+    background-color: #e2e2e2;
+}
+
+.active{
+    background-color: #e2e2e2;
+}
+
+input{
+    width: 10rem;
+    margin-top: 2rem;
+}
