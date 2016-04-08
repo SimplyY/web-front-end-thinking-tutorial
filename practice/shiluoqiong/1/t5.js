@@ -2,9 +2,7 @@
  * Created by MP on 2016/4/2.
  */
 function sortStr(s){
-    var result = "";
-    for(var i = s.length; i >= 0; i--)
-        result += s.charAt(i);
-    return result;
+    var sortedS = Array.prototype.slice.call(s).sort().join('');
+    return sortedS;
 }
-sortStr('cba');
+console.log(sortStr('cba'));

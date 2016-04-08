@@ -1,7 +1,8 @@
 /**
  * Created by MP on 2016/4/2.
  */
-function logEverSecond(){
+function logEverySecond(){
+    var a = ['a', 'b', 'c', 'd'];
     for (var i = 0; i < a.length; i++) {
         (function(j){
             setTimeout(function(){
@@ -10,6 +11,6 @@ function logEverSecond(){
         })(i);
     }
 }
-logEverSecond();
+logEverySecond();
 
 

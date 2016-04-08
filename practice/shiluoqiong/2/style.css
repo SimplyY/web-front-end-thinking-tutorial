@@ -1,0 +1,36 @@
+body
+{
+    font-family: Arial;
+    font-size: 10px;
+}
+
+#search
+{
+    position:absolute;
+    top:40%;
+    left:30%;
+}
+
+.inputBox
+{
+    width:500px;
+    height:30px;
+    line-height: 30px;
+}
+
+li
+{
+    list-style-type:none;
+    width: 500px;
+    height: 15px;
+}
+
+li:hover
+{
+    background-color: #e1e1e1;
+}
+
+.active
+{
+ background-color: #e2e2e2;
+}
