@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>practice1</title>
+
+</head>
+<body>
+    <button class="fir">转化为数字</button>
+    <button class="sec">转化为数字数组</button>
+    <button class="thi">使用slice转化为数组</button>
+    <button class="fou">返回helloworld</button>
+    <button class="fiv">按英文字母排序</button>
+    <button class="six">每过1秒log一下数组中的值</button>
+    <button class="sev">apply</button>
+    <button class="eig">写出输出答案</button>
+
+
+</body>
+<script language="javascript">
+
+
+    /*$(function(){*/
+
+    var divFunc = document.getElementsByTagName("button");
+    for (var i = 0; i < divFunc.length; i++) {
+
+
+        if (divFunc[i].getAttribute("class") == "fir") {
+            divFunc[i].onclick = function () {
+                fir();
+            }
+        }
+        if (divFunc[i].getAttribute("class") == "sec") {
+            divFunc[i].onclick = function () {
+                sec();
+            }
+        }
+        if (divFunc[i].getAttribute("class") == "thi") {
+            divFunc[i].onclick = function () {
+                thi();
+            }
+        }
+        if (divFunc[i].getAttribute("class") == "fou") {
+            divFunc[i].onclick = function () {
+                spacify('hello world');
+            }
+        }
+        if (divFunc[i].getAttribute("class") == "fiv") {
+            divFunc[i].onclick = function () {
+                fiv('asdq');
+            }
+        }
+        if (divFunc[i].getAttribute("class") == "six") {
+            divFunc[i].onclick = function () {
+                six();
+            }
+        }
+        if (divFunc[i].getAttribute("class") == "sev") {
+            divFunc[i].onclick = function () {
+                log('sss');
+            }
+        }
+        if (divFunc[i].getAttribute("class") == "eig") {
+            divFunc[i].onclick = function () {
+                eig();
+            }
+        }
+    }
+
+    function fir(){
+        var a="123";
+        var b = parseInt(a);
+        alert(b);
+    }
+    function sec(){
+        var c = ["1","2"];
+        /*var d = new Array(2);
+         d[0] = Number("1");
+         d[1] = Number("2");*/
+
+        var d = c.map(Number);
+        alert(d);
+    }
+    function thi(){
+        var childCollection = document.querySelectorAll('button');
+        /* var child = childCollection.slice(1);*/
+        var childs = Array.prototype.slice.call(childCollection);
+        alert(childs);
+    }
+    function spacify(str){
+        /*var newStr = str.join(' ');*/
+        var newStr = str.replace(/\s/g,'').split('').join(' ');
+        /*var newStr = str.replace(/\s/g,'').join(' ');*/
+        /*   \s为匹配一个空白字符，具体见JavaScript RegExp元字符；/g是一个修饰符，用于执行全局匹配（查找所有匹配而非在找到第一个匹配后停止） */
+        /* replace(/\s/g,'') ：找出全局中的所有空白字符，并将其删除（也就是替换为""）*/
+        /* split中：如果把空字符串 ("") 用作其参数，那么 返回的字符串中的每个字符之间都会被分割。  */
+        /*  this 是个参数：普通的函数调用隐式传入 this，call 和 apply 可以显式指定它。
+         函数调用的三种方式:
+         obj.myFunc();
+         myFunc.call(obj,arg);
+         myFunc.apply(obj,[arg1,arg2..]);
+         */
+        alert(newStr);
+        return(newStr);
+    }
+    function fiv(str){
+        /*var newStr = str.sort();*/
+        var newStr = Array.prototype.slice.call(str).sort().join('');
+        /*var newStr = str.slice.sort().join('');*/
+        /*为什么有些地方使用 myFunc.call(obj,arg);
+        有些地方使用obj.myFunc();无法调用
+        */
+        alert(newStr);
+        return(newStr);
+    }
+    function six(){
+        var a = ['a', 'b', 'c', 'd'];
+        for(var i = 0;i < a.length;i++)
+        {
+            /*setTimeout(function(){
+                console.log(a[i]);
+            },1000);   */
+
+            (function(j){
+                setTimeout(function(){
+                    console.log(a[j]);
+                }, j * 1000);
+            })(i);
+        }
+    }
+    function log(){
+        console.log.apply(console,arguments);
+    }
+    function eig(){
+        var User = {
+            count: 1,
+
+            getCount: function(){
+                return this.count;
+            }
+        };
+
+        console.log(User.getCount()); //1
+
+        var func = User.getCount;
+
+
+        console.log(func());//undefined
+        console.log(func); //整体函数
+
+    }
+
+</script>
+</html>
+
+
+
+
+
+
+
+
+
