@@ -62,7 +62,7 @@ react.render
 
 #####代码阅读
 react的输入框：
-<code>this.state = {    inputStr: ''//设置新状态以便动态获取input里的值}</code>
+<code>this.state = { inputStr: ''//设置新状态以便动态获取input里的值}</code>
 <code>return item.toLowerCase().indexOf(inputStr.toLowerCase()) >= 0//将输入的字符串与数据字符串化为小写进行比较（避免了因为大小写的问题而导致没有匹配出来）//如果匹配后发现确实存在，那么就返回伪数据数组里这个字符串进tips</code>
 
 避免了dom操作（用到document,window等参数），在jsx里的操作都是对虚拟的组件进行的操作，用Virtual DOM这个过渡层来表达JS对DOM修改操作，通过引入这个过渡层，所有对DOM的操作不会立刻显示在DOM树上，而是等待事件完成所有的DOM修改之后，通过React内部实现的diff算法来计算出最小diff，然后再以最小的步骤将 diff 作用到真实的 DOM 上，最后得益于「组件」这个概念，每个React组件都拥有一个完整的生命周期，对DOM状态的操作都会批量更新，以期尽可能的减少页面重绘，来追求更好的性能。
