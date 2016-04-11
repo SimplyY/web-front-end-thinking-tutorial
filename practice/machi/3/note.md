@@ -12,12 +12,12 @@ bind 显式调用?bind(this)将事件函数上下文绑定要组件实例上，有的是bind(this,arg1,a
    还可以使用?[JSX 展开属性](http://reactjs.cn/react/docs/jsx-spread-zh-CN.html)?来合并现有的 props 和其它值；
 
    直接在组件中使用key/value的形式来指定属性
-   <code>React.render(??
+   <pre><code>React.render(??
 ????<HelloWorld?name="Jack"/>,??
 ????document.getElementById('container')??
-    );??</code>
+    );??</code></pre>
 
-   <code>
+   <pre><code>
    var?HelloWorld?=?React.createClass({??
 ????render:?function()?{??
 ????????return?(??
@@ -25,7 +25,7 @@ bind 显式调用?bind(this)将事件函数上下文绑定要组件实例上，有的是bind(this,arg1,a
 ????????);??
 ????}??
     });??//通过this.props.name就可以获取name属性值啦
-    </code>
+    </code></pre>
 3. this.states
 React 把组件看成是一个状态机（State Machines）。通过与用户的交互，实现不同状态，然后渲染 UI，让用户界面和数据保持一致。React 里，只需更新组件的 state，然后根据新的 state 重新渲染用户界面（不要操作 DOM）。
 初始化state 可以在组件类的构造函数里搞一下，或者用getInitialState函数（该函数只在组件装载前调用一次）；
@@ -37,7 +37,7 @@ https://facebook.github.io/react/docs/interactivity-and-dynamic-uis-zh-CN.html
 
 5. jsx
 JSX 写的一个链接：
-<code><--!a href="http://facebook.github.io/react/"-->Hello!</a></code>
+<pre><code><--!a href="http://facebook.github.io/react/"-->Hello!</a></code></pre>
 用 JS 代码来写就成这样了：
 <code>React.createElement('a', {href: 'http://facebook.github.io/react/'}, 'Hello!')</code>
 如果要在jsx里插入Js表达式（逻辑啊赋值，比较，算数，按位，字符串）就要加{}；
