@@ -1,0 +1,10 @@
+1.parseInt(string, radix);
+-将字符串转换为数字，radix表示进制
+2.setInterval与setTimeout
+-setInterval(code, delay) - 每隔指定时间自动执行方法
+-setTimeout(code, [delay]) - 在执行时,是在载入后延迟指定时间后,去执行一次表达式
+3.call与apply
+-call()和apply()都是为了改变函数体内部this的指向
+-func.call(this, arg1, arg2);
+-func.apply(this, [arg1, arg2]);
+-当参数是数组时用 apply.

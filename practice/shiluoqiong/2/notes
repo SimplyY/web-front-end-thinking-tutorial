@@ -1,0 +1,33 @@
+1.link与src区别
+-href 表示超文本引用（hypertext reference），在 link和a 等元素上使用。src 表示来源地址，在 img、script、iframe 等元素上。
+
+-src 的内容，是页面必不可少的一部分，是引入。href 的内容，是与该页面有关联，是引用。区别就是，引入和引用。
+
+2.实现搜索框自动补全的步骤
+-若有输入或输入框改变（监听）->获取输入->根据输入得到相应的匹配字符串->将这些字符串显示到输入框之下
+-键盘响应：若有下拉框且按下上或下键->改变高亮文本->若按回车则将输入框中的文本改为下拉框中的文本
+-鼠标响应：若有下拉框且鼠标悬停在下拉框上->改变低亮文本->点击后将输入框中的文本改为点击的文本
+
+-①如何实时监听输入框变化？
+-IE: onpropertychange
+-非IE：oninput
+
+-②如何得到相应的匹配字符串？
+-RegExp.test() :  函数返回一个布尔值，用于指示在所搜索的字符串中是否存在正则表达式模式对应的匹配。
+
+3.attachEvent和addEventListener的不同
+-都是为某一事件附加其他的处理事件。
+-attachEvent不支持Mozilla系列，addEventListener支持。
+-两者的执行顺序也不同。
+-attachEvent:
+-var btn1Obj = document.getElementById("btn1");
+-btn1Obj.attachEvent("onclick",method1);
+-btn1Obj.attachEvent("onclick",method2);
+-btn1Obj.attachEvent("onclick",method3);
+-执行顺序为method3->method2->method1
+-addEventListener :
+-var btn1Obj = document.getElementById("btn1");
+-btn1Obj.addEventListener("click",method1,false);
+-btn1Obj.addEventListener("click",method2,false);
+-btn1Obj.addEventListener("click",method3,false);
+-执行顺序为method1->method2->method3
