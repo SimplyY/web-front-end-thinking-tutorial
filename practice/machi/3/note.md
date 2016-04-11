@@ -11,12 +11,12 @@ bind 显式调用 bind(this)将事件函数上下文绑定要组件实例上，
    还可以使用 [JSX 展开属性](http://reactjs.cn/react/docs/jsx-spread-zh-CN.html) 来合并现有的 props 和其它值；
 
    直接在组件中使用key/value的形式来指定属性
-   <```
+<code>
    React.render(  
     <HelloWorld name="Jack"/>,  
     document.getElementById('container')  
     );  
-   ```
+   </code>
    <code>
    var HelloWorld = React.createClass({  
     render: function() {  
