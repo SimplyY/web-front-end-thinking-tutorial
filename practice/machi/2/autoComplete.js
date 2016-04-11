@@ -3,12 +3,12 @@
  */
 var array = ["a","add","fft","ssd","dct","ddt","asdfgs","abd","asdrrr"];
 function autoComplete(document,data) {
-    var  element = document.getElementById("demo");
+    var element = document.getElementById("demo");
     var board = document.getElementById("tip");
     var CompleteArray=[];
-    element.addEventListener("input",OnCheck,false);
+    element.addEventListener("input",onCheck,false);
 
-    function OnCheck() {
+    function onCheck() {
         CleanLastComplete();
         FindThisResult(array);
         ShowComplete(array);
@@ -16,7 +16,7 @@ function autoComplete(document,data) {
     }
 
     function CleanLastComplete(data) {
-        while(board.hasChildNodes())    //删除所有子节点
+        while(board.hasChildNodes())     //删除所有子节点
         {
             board.removeChild(board.firstChild);
         }
@@ -37,11 +37,10 @@ function autoComplete(document,data) {
 
     }
 
-    function   ShowComplete(data){
+    function ShowComplete(data){
         console.log(element.value);
         if(CompleteArray){
-            CompleteArray.forEach(
-                function produce(item){
+            CompleteArray.forEach(function produce(item){
                     var e = document.createElement("div");
                     e.innerHTML=item;
                     board.appendChild(e);
