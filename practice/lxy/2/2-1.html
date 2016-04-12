@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p id="demo"></p>
+
+<form name="selectForm">
+    <p>Search  <input type="text" id="text1" /></p>
+    <br />
+    <td width="180" rowspan="6" height="204" align="center">
+        <select size="13" name="allItem" multiple style="width:150">
+            <option value="pink" >pink</option>
+            <option value="purple" >purple</option>
+            <option value="green" >green</option>
+            <option value="gen" >gen</option>
+            <option value="gensss" >gensss</option>
+            <option value="treee" >treee</option>
+        </select>
+    </td>
+</form>
+
+<script>
+    var str=['pink','purple','green','gen','gensss','treee']
+    len = str.length
+    document.getElementById("text1").addEventListener("keydown", function(){
+        var text = document.getElementById("text1")
+        var n = 0
+        for(let i = 0;i < len;i++){
+            if(str[i].indexOf(text)==0){
+              //document.selectForm.allItem.options[n]=new Option(str[i]);
+              document.getElementById("demo").innerHTML = str[i]
+              n++
+              }
+        }
+    });
+</script>
+
+
+</body>
+</html>
