@@ -73,7 +73,6 @@ class TodoApp extends Component {
 
 function changeHandle(event) {
     this.setState({inputStr: event.target.value.trim()})
-
 }
 
 function enterKey(event,dataArray)
@@ -97,9 +96,7 @@ function destroy(item)
 function ChangeAdd(event){
     if(event.which==13) {
         let i = this.state.todoList.length-1
-
         if(this.state.index === i){
-
             this.setState({
                 todoList: [...this.state.todoList.slice(0, this.state.index),
                     this.state.inputStr]
@@ -119,7 +116,6 @@ function getIndex(item){
     let indexx = this.state.todoList.find(item)
     this.setState({index:indexx})
     console.log(this.state.index)
-
 }
 
 function ShowInput(event){
