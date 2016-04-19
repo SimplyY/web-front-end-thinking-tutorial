@@ -1,14 +1,17 @@
 //TodoApp.jsx
 import React, {Component} from 'react'
-
+var classNames = require('classnames');
 class TodoApp extends Component {
     constructor() {
         super()
         this.state = {
             inputStr: '',
-            //设置新状态以便动态获取input里的值
-          todoList:[]//设置一个事件数组，存储之前的事件字符串
-        //    start:false
+            //杈撳叆鐨勫瓧绗︿覆
+            todoList:[],//瀛樺偍todo鍒楄〃
+        //    start:false 鏇村ソ
+            inputAddStr:'',
+            index:-1
+         //   itemClass:[]
         }
 
     }
@@ -18,8 +21,18 @@ class TodoApp extends Component {
     //    const tips = getTips(dataArray, this.state.inputStr)
      //   var tips = this.props.dataArray
         console.log(this.state)
+        let i =0
+        let num=0
+        let itemClasses = this.state.todoList.map((item,i) => {
 
-
+            let itemClass = classNames({
+                'itemText': true,
+                'active': i === this.state.index
+            });
+            i=i+1;
+            return itemClass;
+        })
+        i=0
         return (
             <section>
                     <div>
@@ -28,21 +41,25 @@ class TodoApp extends Component {
                             <input placeholder="what needs tobe done?" className="new-todo"
                                    onChange={changeHandle.bind(this)} onKeyDown={enterKey.bind(this)}
                                    />
-
                         </header>
                         <section>
                             <ul className="todo">
-                               {this.state.todoList.map(item => {
+                               {this.state.todoList.map((item,i) => {
                                    console.log({item})
                                    console.log("sdsd")
+                                  // let i=this.state.index
+                                  // this.setState({index:i+1})
+
                                     return (
-                                        <li list-id= {item}>
+                                        <li list-id= {item}onDoubleClick={getIndex.bind(this,item)}>
                                             <div>
-                                                <label>{item}</label>
-                                                <button className="destroy" onclick={destroy.bind(this,{item})}>destroy</button>
+                                            <label>{item}</label>
+                                            <button className="destroy" onClick={destroy.bind(this,item)}>destroy</button>
+
+                                            <input  className={itemClasses[i++]} onChange={changeHandle.bind(this)}
+                                                    onKeyDown={ChangeAdd.bind(this)}  ></input>
                                             </div>
-                                            <input value={item} className="edit"/>
-                                        </li>//遍历tips然后返回子组件
+                                        </li>//杩斿洖涓�涓柊tip
                                     )
                                 })}
                             </ul>
@@ -71,8 +88,56 @@ function destroy(item)
 {
     console.log(item)
     console.log(this)
-    const index= this.state.todoList.findIndex(item)
-    this.setState({todoList:this.state.todoList.prototype.slice.call(index,1)})
+   // const index= item.indexOf(this.state.todoList)
+    this.setState({todoList:this.state.todoList.filter(function (candidate) {
+        return candidate !== item})})
+  //  console.log(index)
 }
 
+function ChangeAdd(event){
+    if(event.which==13) {
+        let i = this.state.todoList.length-1
+
+        if(this.state.index === i){
+
+            this.setState({
+                todoList: [...this.state.todoList.slice(0, this.state.index),
+                    this.state.inputStr]
+                ,index:-1 })
+        }else{
+            i = this.state.index + 1
+            this.setState({
+                todoList: [...this.state.todoList.slice(0, this.state.index),
+                    this.state.inputStr, this.state.todoList.slice(i)]
+                ,index:-1 })
+        }
+    }
+
+}
+
+function getIndex(item){
+    let indexx = this.state.todoList.find(item)
+    this.setState({index:indexx})
+    console.log(this.state.index)
+
+}
+
+function ShowInput(event){
+    let inputNode = event.target.getElementsByTagName('input');
+    let newClassName =classNames('itemText',' active');
+    inputNode.className = newClassName;
+}
+Array.prototype.find=function(item){
+    let k=-1
+   for(let i=0,n=this.length;i<n;i++){
+       if(this[i]===item) {
+           k = i
+       }
+   }
+    if(k !=-1){
+        return k
+    }else{
+        return -1
+    }
+}
 export default TodoApp
