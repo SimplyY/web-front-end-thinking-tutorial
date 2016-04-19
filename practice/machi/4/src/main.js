@@ -1,6 +1,7 @@
 // main.jsx
 import React from 'react'
 import { render } from 'react-dom'
+import './css/style.css'
 var dataArray={}
 //import Root from './Root'
 import TodoApp from './component/TodoApp'
